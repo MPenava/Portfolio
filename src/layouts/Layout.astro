@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/shared/Footer.astro";
 import Header from "@/components/shared/Header.astro";
 ---
 
@@ -17,7 +18,13 @@ import Header from "@/components/shared/Header.astro";
   </head>
   <body>
     <Header />
-    <slot />
+    <div class="container mx-auto flex max-w-6xl flex-col gap-16 p-4 py-8">
+      <div class="flex flex-col gap-12 py-4 lg:gap-[148px] lg:py-16">
+        <slot />
+      </div>
+
+      <Footer />
+    </div>
   </body>
 </html>
 <script src="@/components/lib/annotate.ts"></script>

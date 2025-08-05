@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import { P } from "../ui/typography";
+import { Muted } from "../ui/typography";
+import { H4 } from "../ui/typography";
+import { Button } from "../ui/button";
+
+import facebookLogo from "@/assets/media/facebook.png";
+import instagramLogo from "@/assets/media/instagram.png";
+import linkedinLogo from "@/assets/media/linkedin.png";
+import githubLogo from "@/assets/media/github.png";
+import mailLogo from "@/assets/media/mail.png";
+
+const socialMediaLinks = [
+  {
+    id: "facebook",
+    href: "https://www.facebook.com/marko.penava.79",
+    image: facebookLogo,
+  },
+  {
+    id: "instagram",
+    href: "https://www.instagram.com/penavamarko/",
+    image: instagramLogo,
+  },
+  {
+    id: "linkedin",
+    href: "https://www.linkedin.com/in/marko-penava-5149721b9/",
+    image: linkedinLogo,
+  },
+  {
+    id: "github",
+    href: "https://github.com/MPenava",
+    image: githubLogo,
+  },
+  {
+    id: "email",
+    href: "mailto:penavamarko482@gmail.com",
+    image: mailLogo,
+  },
+];
+
+const phone = "+387 63 847 007";
+const address = "Batin II 16 Posušje, BiH";
+const copyright = "© 2025 Portfolio - All rights reserved.";
+---
+
+<footer>
+  <div class="container">
+    <div
+      class="mx-10 flex flex-col justify-between gap-x-5 gap-y-8 md:flex-row"
+    >
+      <div class="flex flex-col gap-2">
+        <H4>Contact</H4>
+        <P>{phone}</P>
+      </div>
+      <div class="flex flex-col gap-2">
+        <H4>Around the Web</H4>
+        <div class="flex flex-row gap-2">
+          {
+            socialMediaLinks.map((media) => (
+              <a
+                class="btn btn-outline-light btn-social mx-1"
+                target="blank"
+                href={media.href}
+              >
+                <Button
+                  variant="secondary"
+                  className="size-10 rounded-full p-0"
+                >
+                  <Image alt={media.id} src={media.image} />
+                </Button>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <H4>{address}</H4>
+        <P>Batin II 16 Posušje, BiH</P>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8 flex w-full justify-center border-t pt-4">
+    <Muted>{copyright}</Muted>
+  </div>
+</footer>

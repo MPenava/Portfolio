@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    ".prettierrc.mjs",
+    "src/components/ui/**",
+    "src/components/lib/annotate.ts"
+  ],
+  "ignoreDependencies": ["rough-notation"],
+  "rules": {
+    "unlisted": "off"
+  }
+}
