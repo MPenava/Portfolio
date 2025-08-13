@@ -4,7 +4,7 @@
     "src/components/ui/**",
     "src/components/lib/annotate.ts"
   ],
-  "ignoreDependencies": ["rough-notation"],
+  "ignoreDependencies": ["rough-notation", "sharp"],
   "rules": {
     "unlisted": "off"
   }

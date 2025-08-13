@@ -1,5 +1,10 @@
 ---
-
+import ProfileImage from "@/components/shared/ProfileImage";
+import { H1, H3 } from "../ui/typography";
 ---
 
-<section>ProfileSection</section>
+<section class="flex flex-col items-center gap-8 py-32">
+  <ProfileImage client:idle />
+  <H1>Marko Penava</H1>
+  <H3>Frontend Developer</H3>
+</section>

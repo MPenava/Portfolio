@@ -27,8 +27,11 @@ const HeaderNavigation = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/75 shadow-md backdrop-blur-md">
       <nav className="container mx-auto flex max-w-6xl items-center justify-between p-4">
-        <a href={links.home} className="flex items-center gap-2">
-          Portfolio
+        <a
+          href={links.home}
+          className="flex items-center gap-2 text-xl font-bold"
+        >
+          PORTFOLIO
         </a>
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
