@@ -57,7 +57,7 @@ const HeaderNavigation = () => {
                 href={links.education}
                 className={navigationMenuTriggerStyle()}
               >
-                Education
+                Education & Career
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -109,7 +109,7 @@ const HeaderNavigation = () => {
                 Skills
               </a>
               <a href={links.education} className="font-medium">
-                Education
+                Education & Career
               </a>
               <a href={links.certificates} className="font-medium">
                 Certificates
