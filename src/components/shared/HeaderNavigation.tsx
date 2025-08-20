@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
-import { MenuIcon } from "lucide-react";
+import { Calendar, MenuIcon } from "lucide-react";
 
 const links = {
   home: "#home",
@@ -74,6 +74,12 @@ const HeaderNavigation = () => {
               >
                 Education
               </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button>
+                <Calendar />
+                Book a Meeting
+              </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

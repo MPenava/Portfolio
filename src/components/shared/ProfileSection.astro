@@ -3,8 +3,21 @@ import ProfileImage from "@/components/shared/ProfileImage";
 import { H1, H3 } from "../ui/typography";
 ---
 
-<section class="flex flex-col items-center gap-8 py-32">
-  <ProfileImage client:idle />
-  <H1>Marko Penava</H1>
-  <H3>Frontend Developer</H3>
+<section>
+  <div
+    class="absolute inset-x-0 top-0 flex h-full w-full items-center justify-center opacity-100"
+  >
+    <img
+      alt="background"
+      src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/patterns/square-alt-grid.svg"
+      class="opacity-90 [mask-image:radial-gradient(75%_75%_at_center,white,transparent)]"
+    />
+  </div>
+  <div class="container relative z-10">
+    <div class="flex flex-col items-center gap-8 py-32">
+      <ProfileImage client:idle />
+      <H1>Marko Penava</H1>
+      <H3>Frontend Developer</H3>
+    </div>
+  </div>
 </section>
