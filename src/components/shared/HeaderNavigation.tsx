@@ -51,6 +51,15 @@ const HeaderNavigation = () => {
                 About
               </NavigationMenuLink>
             </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                href={links.education}
+                className={navigationMenuTriggerStyle()}
+              >
+                Education
+              </NavigationMenuLink>
+            </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 href={links.skills}
@@ -61,18 +70,10 @@ const HeaderNavigation = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                href={links.education}
+                href={links.certificates}
                 className={navigationMenuTriggerStyle()}
               >
-                Education
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                href={links.education}
-                className={navigationMenuTriggerStyle()}
-              >
-                Education
+                Certificates
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>

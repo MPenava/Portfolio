@@ -44,7 +44,7 @@ export const H4 = createComponent<HTMLHeadingElement>(
 
 export const Lead = createComponent<HTMLParagraphElement>(
   "p",
-  "text-xl text-muted-foreground",
+  "text-base text-muted-foreground italic",
   "Lead",
 );
 

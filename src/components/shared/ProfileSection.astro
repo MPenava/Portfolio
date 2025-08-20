@@ -1,6 +1,8 @@
 ---
 import ProfileImage from "@/components/shared/ProfileImage";
 import { H1, H3 } from "../ui/typography";
+import { Button } from "../ui/button";
+import { Calendar } from "lucide-react";
 ---
 
 <section>
@@ -18,6 +20,9 @@ import { H1, H3 } from "../ui/typography";
       <ProfileImage client:idle />
       <H1>Marko Penava</H1>
       <H3>Frontend Developer</H3>
+      <div class="flex w-full md:w-fit">
+        <Button><Calendar />Book a Meeting</Button>
+      </div>
     </div>
   </div>
 </section>
