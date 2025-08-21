@@ -7,12 +7,12 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import type { GetImageResult } from "astro";
 import { H2, Lead } from "../ui/typography";
+import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 
 interface Certificate {
   id: string;
-  image: GetImageResult;
+  image: string;
 }
 
 interface CertificatesCaruselProps {
@@ -90,13 +90,28 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                 key={item.id}
                 className="basis-full md:basis-1/2 lg:basis-1/3"
               >
-                <div className="group relative aspect-square h-full max-w-full overflow-hidden rounded-xl border-2 md:aspect-square lg:aspect-square">
-                  <img
-                    src={item.image.src}
-                    alt={item.id}
-                    className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="group relative aspect-square h-full w-full overflow-hidden rounded-xl border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      aria-label={`Open certificate ${item.id}`}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.id}
+                        className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="w-[90vw] max-w-5xl border-none bg-background p-2 sm:p-6">
+                    <img
+                      src={item.image}
+                      alt={item.id}
+                      className="mx-auto max-h-[80vh] w-full object-contain"
+                    />
+                  </DialogContent>
+                </Dialog>
               </CarouselItem>
             ))}
           </CarouselContent>

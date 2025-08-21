@@ -6,44 +6,29 @@ import php from "@/assets/certs/php.jpg";
 import phpoop from "@/assets/certs/php-oop.jpg";
 import laravel from "@/assets/certs/laravel.jpg";
 import golang from "@/assets/certs/golang.jpg";
-import { getImage } from "astro:assets";
 
 const certs = [
   {
     id: "vue",
-    image: vue,
+    image: vue.src,
   },
   {
     id: "php",
-    image: php,
+    image: php.src,
   },
   {
     id: "phpoop",
-    image: phpoop,
+    image: phpoop.src,
   },
   {
     id: "laravel",
-    image: laravel,
+    image: laravel.src,
   },
   {
     id: "golang",
-    image: golang,
+    image: golang.src,
   },
 ];
-
-const processedCerts = await Promise.all(
-  certs.map(async (cert) => {
-    const optimizedImage = await getImage({
-      src: cert.image,
-      width: 500,
-      format: "webp",
-    });
-    return {
-      ...cert,
-      image: optimizedImage,
-    };
-  }),
-);
 ---
 
-<CertificatesCarusel client:idle certificates={processedCerts} />
+<CertificatesCarusel client:idle certificates={certs} />
