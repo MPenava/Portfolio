@@ -1,11 +1,49 @@
 ---
-import { H2, Lead } from "../ui/typography";
+import CertificatesCarusel from "./CertificatesCarusel";
+
+import vue from "@/assets/certs/vue.jpg";
+import php from "@/assets/certs/php.jpg";
+import phpoop from "@/assets/certs/php-oop.jpg";
+import laravel from "@/assets/certs/laravel.jpg";
+import golang from "@/assets/certs/golang.jpg";
+import { getImage } from "astro:assets";
+
+const certs = [
+  {
+    id: "vue",
+    image: vue,
+  },
+  {
+    id: "php",
+    image: php,
+  },
+  {
+    id: "phpoop",
+    image: phpoop,
+  },
+  {
+    id: "laravel",
+    image: laravel,
+  },
+  {
+    id: "golang",
+    image: golang,
+  },
+];
+
+const processedCerts = await Promise.all(
+  certs.map(async (cert) => {
+    const optimizedImage = await getImage({
+      src: cert.image,
+      width: 500,
+      format: "webp",
+    });
+    return {
+      ...cert,
+      image: optimizedImage,
+    };
+  }),
+);
 ---
 
-<section id="certificates" class="scroll-mt-24">
-  <div class="mb-16">
-    <H2>Certificates</H2>
-    <Lead>Which skills are backed by certificates?</Lead>
-  </div>
-  <div>Elements</div>
-</section>
+<CertificatesCarusel client:idle certificates={processedCerts} />
