@@ -1,5 +1,28 @@
 ---
 import { H2, Lead } from "../ui/typography";
+import { Separator } from "@/components/ui/separator";
+
+type TimelineEntry = {
+  date: string;
+  title: string;
+};
+
+const timelineData: TimelineEntry[] = [
+  {
+    date: "Oct 2018 - Nov 2021",
+    title:
+      "Bachelor of Computer Science, Faculty of Natural Sciences, Mathematics and Education at Mostar",
+  },
+  {
+    date: "Nov 2021 - Nov 2023",
+    title:
+      "Master of Computer Science, Faculty of Natural Sciences, Mathematics and Education at Mostar",
+  },
+  {
+    date: "Jan 2024 - now",
+    title: "Frontend Developer at Inovia",
+  },
+];
 ---
 
 <section id="education" class="scroll-mt-24">
@@ -7,5 +30,28 @@ import { H2, Lead } from "../ui/typography";
     <H2>Education & Career</H2>
     <Lead>What shaped my professional path?</Lead>
   </div>
-  <div>Elements</div>
+  <div>
+    <div class="container">
+      <div class="relative mx-auto max-w-4xl">
+        <Separator
+          orientation="vertical"
+          className="absolute left-2 top-4 bg-muted"
+        />
+        {
+          timelineData.map((entry) => (
+            <div class="relative mb-10 pl-5">
+              <div class="absolute left-0 top-3.5 flex size-4 items-center justify-center rounded-full bg-foreground" />
+              <h4 class="rounded-xl px-3 py-2 text-xl font-bold tracking-tight xl:mb-4">
+                {entry.title}
+              </h4>
+
+              <h5 class="text-md top-3 rounded-xl px-2 tracking-tight text-muted-foreground">
+                {entry.date}
+              </h5>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </section>

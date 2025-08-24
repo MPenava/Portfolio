@@ -4,7 +4,7 @@ import mpen from "@/assets/profile/mpen.jpg";
 
 const ProfileImage = () => {
   return (
-    <Avatar className="size-48 border border-8">
+    <Avatar className="size-56 border-8">
       <AvatarImage src={mpen.src} alt="Profile image" />
       <AvatarFallback>Profile image</AvatarFallback>
     </Avatar>
