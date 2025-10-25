@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -5,9 +7,11 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import { MenuIcon } from "lucide-react";
+
 import { Button } from "../ui/button";
-import { Calendar, MenuIcon } from "lucide-react";
-import { H1, H2, H3, H4, Large } from "../ui/typography";
+import { H3, Large } from "../ui/typography";
 
 const links = {
   home: "#home",
@@ -20,9 +24,38 @@ const links = {
 const menuLinkStyle = "relative px-4 py-2";
 
 const HeaderNavigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-background">
-      <nav className="container mx-auto flex max-w-7xl items-center justify-between p-4">
+    <header
+      className={cn(
+        "sticky top-0 z-50 bg-background transition-all duration-300",
+        isScrolled && "shadow-sm",
+      )}
+    >
+      <nav
+        className={cn(
+          "container mx-auto flex max-w-7xl items-center justify-between px-4 transition-all duration-300",
+          isScrolled ? "py-3" : "py-6",
+        )}
+      >
         <a href="#home" className="flex items-center space-x-2">
           <H3>PORTFOLIO</H3>
         </a>
