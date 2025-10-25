@@ -7,6 +7,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { Calendar, MenuIcon } from "lucide-react";
+import { H1, H2, H3, H4, Large } from "../ui/typography";
 
 const links = {
   home: "#home",
@@ -16,23 +17,25 @@ const links = {
   certificates: "#certificates",
 };
 
-const menuLinkStyle =
-  "relative h-9 px-4 py-2 before:absolute before:bottom-0 before:left-1/4 before:h-0.5 before:w-1/2 before:scale-x-0 before:bg-primary before:transition-transform hover:before:scale-x-100";
+const menuLinkStyle = "relative px-4 py-2";
 
 const HeaderNavigation = () => {
   return (
-    <header className="sticky top-0 z-50 border-b backdrop-blur-md">
-      <nav className="container mx-auto flex max-w-6xl items-center justify-between p-4">
+    <header className="sticky top-0 z-50 bg-background">
+      <nav className="container mx-auto flex max-w-7xl items-center justify-between p-4">
+        <a href="#home" className="flex items-center space-x-2">
+          <H3>PORTFOLIO</H3>
+        </a>
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink href={links.home} className={menuLinkStyle}>
-                Home
+                <Large>HOME</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href={links.about} className={menuLinkStyle}>
-                About
+                <Large>ABOUT</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -41,12 +44,12 @@ const HeaderNavigation = () => {
                 href={links.education}
                 className={menuLinkStyle}
               >
-                Education & Career
+                <Large>EDUCATION & CAREER</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink href={links.skills} className={menuLinkStyle}>
-                Skills
+                <Large>SKILLS</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -54,16 +57,12 @@ const HeaderNavigation = () => {
                 href={links.certificates}
                 className={menuLinkStyle}
               >
-                Certificates
+                <Large>CERTIFICATES</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem></NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Button>
-          <Calendar />
-          Book a Meeting
-        </Button>
         <Sheet>
           <SheetTrigger asChild className="lg:hidden">
             <Button variant="outline" size="icon" aria-label="Menu">

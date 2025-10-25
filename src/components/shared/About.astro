@@ -6,25 +6,28 @@ import { H2, Lead, P } from "../ui/typography";
 ---
 
 <section id="about" class="scroll-mt-24">
-  <div class="mb-16">
-    <H2>About</H2>
-    <Lead>Who I am & what I do?</Lead>
-  </div>
-  <div class="flex flex-col items-center gap-5">
-    <div class="mx-0 flex flex-col items-stretch gap-5 md:mx-32 md:flex-row">
-      <P className="flex-1 italic"
-        >I am currently a 2nd year graduate student in computer science at the
-        Faculty of Natural, Mathematical and Educational Sciences in Mostar.</P
-      >
-      <Separator orientation="horizontal" className="md:hidden" />
-      <P className="flex-1 italic"
-        >A highly motivated and skilled web developer in designing and
-        developing dynamic websites. Proficient in front-end and back-end
-        technologies, with a strong understanding of web development principles.</P
+  <div class="container mx-auto max-w-7xl">
+    <div class="mb-16">
+      <H2>About</H2>
+      <Lead>Who I am & what I do?</Lead>
+    </div>
+    <div class="flex flex-col items-center gap-5">
+      <div class="mx-0 flex flex-col items-stretch gap-5 md:mx-32 md:flex-row">
+        <P className="flex-1 italic"
+          >I am currently a 2nd year graduate student in computer science at the
+          Faculty of Natural, Mathematical and Educational Sciences in Mostar.</P
+        >
+        <Separator orientation="horizontal" className="md:hidden" />
+        <P className="flex-1 italic"
+          >A highly motivated and skilled web developer in designing and
+          developing dynamic websites. Proficient in front-end and back-end
+          technologies, with a strong understanding of web development
+          principles.</P
+        >
+      </div>
+      <Button variant="outline" className="w-full md:w-fit"
+        >Download CV <Download /></Button
       >
     </div>
-    <Button variant="outline" className="w-full md:w-fit"
-      >Download CV <Download /></Button
-    >
   </div>
 </section>
