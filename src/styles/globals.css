@@ -3,11 +3,11 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 203 33% 9%;
+    --background: 210 29% 24%;
     --foreground: 0 0% 98%;
-    --card: 203 33% 9%;
+    --card: 210 29% 24%;
     --card-foreground: 0 0% 98%;
-    --popover: 203 33% 9%;
+    --popover: 210 29% 24%;
     --popover-foreground: 0 0% 98%;
     --primary: 200 82% 42%;
     --primary-foreground: 0 0% 98%;

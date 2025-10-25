@@ -1,19 +1,27 @@
 ---
 import ProfileImage from "@/components/shared/ProfileImage";
-import { H1, H3 } from "../ui/typography";
+import { H1, H3, H4, Lead, P } from "../ui/typography";
 import { Button } from "../ui/button";
-import { Calendar } from "lucide-react";
+import { Calendar, Contact } from "lucide-react";
 ---
 
 <section id="home" class="scroll-mt-24">
   <div class="container">
-    <div class="flex flex-col items-center gap-8 py-32">
+    <div
+      class="flex flex-col items-center justify-between gap-8 py-52 md:flex-row"
+    >
+      <div class="flex max-w-lg flex-col gap-5">
+        <H1>Hello, I'm <span class="text-primary">Marko Penava</span></H1>
+        <Lead className="text-primary">Frontend Developer</Lead>
+        <div class="flex gap-5">
+          <Button><Calendar />Book a Meeting</Button>
+          <Button
+            className="border-2 border-primary bg-background text-primary hover:bg-background/80"
+            ><Contact />Get In Touch</Button
+          >
+        </div>
+      </div>
       <ProfileImage client:idle />
-      <H1>Marko Penava</H1>
-      <H3>{"<Frontend Developer />"}</H3>
-      <Button className="flex w-full md:w-fit"
-        ><Calendar />Book a Meeting</Button
-      >
     </div>
   </div>
 </section>
