@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { H2, Lead } from "../ui/typography";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
+import { StarSeparator } from "./StarSeparator";
 
 interface Certificate {
   id: string;
@@ -42,13 +43,13 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
   }, [carouselApi]);
 
   return (
-    <section id="certificates" className="scroll-mt-24 bg-white">
-      <div className="container mx-auto max-w-7xl">
-        <div className="mb-8 flex items-end justify-between md:mb-10">
-          <div className="flex flex-col gap-4">
-            <H2>Certificates</H2>
-            <Lead>Which skills are backed by certificates?</Lead>
-          </div>
+    <section id="certificates" className="scroll-mt-24 bg-white py-16">
+      <div className="container mx-auto flex max-w-7xl flex-col gap-2">
+        <div className="flex flex-col items-center gap-2">
+          <H2 className="text-secondary">CERTIFICATES</H2>
+          <StarSeparator variant="secondary" />
+        </div>
+        <div className="mb-8 flex items-end justify-end md:mb-10">
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
               size="icon"
