@@ -31,7 +31,10 @@ const skills = [
               <H4>{skill.name}</H4>
               <P>{skill.progress}%</P>
             </div>
-            <Progress value={skill.progress} />
+            <Progress
+              value={skill.progress}
+              aria-label={`Skill ${skill.name}: ${skill.progress} percent`}
+            />
           </div>
         ))
       }
