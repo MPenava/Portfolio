@@ -1,46 +1,26 @@
-# Astro Starter Kit: Basics
+# 💼 Marko Penava — Portfolio
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+This is my personal portfolio website built with **[Astro](https://astro.build/)**, **[React](https://react.dev/)**, and **[Tailwind CSS](https://tailwindcss.com/)**.  
+It showcases abou mes, skills, and professional background in a clean, fast, and responsive interface.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🔗 **Live Site:** [https://www.mpenava.site/](https://www.mpenava.site/)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Tech Stack
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- **Framework:** [Astro](https://astro.build/)
+- **UI Components:** [React](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## ⚙️ Features
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- ⚡ Blazing fast static site powered by Astro  
+- 🎨 Responsive design using Tailwind CSS  
+- 🧩 Interactive React components  
+- 🌙 Light and dark mode support (if applicable)  
+- 📱 Optimized for mobile and desktop devices  
+- 🔍 SEO-friendly metadata setup  
