@@ -1,14 +1,40 @@
 ---
-import { H2 } from "../ui/typography";
+import { Progress } from "../ui/progress";
+import { H2, H4, Lead, P } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
+
+const skills = [
+  { name: "HTML", progress: 90 },
+  { name: "CSS", progress: 80 },
+  { name: "JavaScript", progress: 60 },
+  { name: "Vue.js", progress: 60 },
+  { name: "Nuixt.js", progress: 60 },
+  { name: "MySQL", progress: 45 },
+  { name: "NoSQL", progress: 45 },
+  { name: "PHP", progress: 45 },
+  { name: "Laravel", progress: 45 },
+  { name: "Go", progress: 45 },
+];
 ---
 
 <section id="skills" class="scroll-mt-24 py-16">
-  <div class="container mx-auto max-w-7xl">
+  <div class="container mx-auto flex max-w-7xl flex-col gap-16 px-4">
     <div class="flex flex-col items-center gap-2">
       <H2>SKILLS</H2>
       <StarSeparator />
     </div>
-    <div>Elements</div>
+    <div class="grid grid-cols-2 gap-4">
+      {
+        skills.map((skill) => (
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between">
+              <H4>{skill.name}</H4>
+              <P>{skill.progress}%</P>
+            </div>
+            <Progress value={skill.progress} />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
