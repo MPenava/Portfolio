@@ -2,7 +2,7 @@
 import { Download } from "lucide-react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import { H1, P } from "../ui/typography";
+import { H1, Lead, P } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
 
 import cv from "@/assets/docs/Marko_Penava_CV.pdf";
@@ -17,17 +17,19 @@ import cv from "@/assets/docs/Marko_Penava_CV.pdf";
       <StarSeparator />
     </div>
     <div class="flex flex-col items-center gap-5">
-      <div class="mx-0 flex flex-col items-stretch gap-5 md:mx-32 md:flex-row">
-        <P className="flex-1 italic"
-          >I am currently a 2nd year graduate student in computer science at the
-          Faculty of Natural, Mathematical and Educational Sciences in Mostar.</P
+      <div class="mx-0 flex flex-col items-stretch gap-5 md:mx-32 md:flex-col">
+        <Lead className="text-center text-foreground"
+          >I’m a frontend developer with a Master’s degree in Computer Science
+          from the University of Mostar. Since 2023, I’ve been working at an IT
+          company where I build and maintain web and mobile applications using
+          React and React Native.</Lead
         >
-        <Separator orientation="horizontal" className="md:hidden" />
-        <P className="flex-1 italic"
-          >A highly motivated and skilled web developer in designing and
-          developing dynamic websites. Proficient in front-end and back-end
-          technologies, with a strong understanding of web development
-          principles.</P
+        <Lead className="text-center text-foreground"
+          >Through hands-on project experience, I’ve developed a solid
+          understanding of UI/UX, responsive design, and performance
+          optimization. I enjoy turning ideas into practical, well-designed
+          interfaces and take pride in writing clean, efficient code that’s easy
+          to maintain.</Lead
         >
       </div>
       <Button variant="outline" size="lg" href={cv} download
