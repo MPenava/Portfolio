@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { H2 } from "../ui/typography";
+import { H1 } from "../ui/typography";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { StarSeparator } from "./StarSeparator";
 
@@ -46,7 +46,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
     <section id="certificates" className="scroll-mt-24 bg-white py-16">
       <div className="container mx-auto flex max-w-7xl flex-col gap-2 px-4">
         <div className="flex flex-col items-center gap-2">
-          <H2 className="text-secondary">CERTIFICATES</H2>
+          <H1 className="text-secondary">CERTIFICATES</H1>
           <StarSeparator variant="secondary" />
         </div>
         <div className="mb-8 flex items-end justify-end md:mb-10">

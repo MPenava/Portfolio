@@ -1,6 +1,6 @@
 ---
 import { Progress } from "../ui/progress";
-import { H2, H4, Lead, P } from "../ui/typography";
+import { H1, H4, P } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
 
 const skills = [
@@ -20,10 +20,10 @@ const skills = [
 <section id="skills" class="scroll-mt-24 py-16">
   <div class="container mx-auto flex max-w-7xl flex-col gap-16 px-4">
     <div class="flex flex-col items-center gap-2">
-      <H2>SKILLS</H2>
+      <H1>SKILLS</H1>
       <StarSeparator />
     </div>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid gap-4 sm:grid-cols-2">
       {
         skills.map((skill) => (
           <div class="flex flex-col gap-2">
