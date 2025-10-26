@@ -3,7 +3,9 @@ import ProfileImage from "@/components/shared/ProfileImage";
 import { H1, Large } from "../ui/typography";
 import { Button } from "../ui/button";
 import { StarSeparator } from "../shared/StarSeparator";
-import { Calendar, Contact, Star } from "lucide-react";
+import { Calendar } from "lucide-react";
+
+const calendarLink = "https://calendar.app.google/X9t1hcfETSp9CApe7";
 ---
 
 <section id="home" class="scroll-mt-24 bg-primary">
@@ -14,7 +16,11 @@ import { Calendar, Contact, Star } from "lucide-react";
         <H1>MARKO PENAVA</H1>
         <StarSeparator />
         <Large>Student · Web Developer</Large>
-        <Button variant="secondary" size="lg"><Calendar />Book a Meeting</Button
+        <Button
+          variant="secondary"
+          size="lg"
+          href={calendarLink}
+          target="_blank"><Calendar />Book a Meeting</Button
         >
       </div>
     </div>

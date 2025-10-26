@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { H2, Lead } from "../ui/typography";
+import { H2 } from "../ui/typography";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { StarSeparator } from "./StarSeparator";
 
@@ -44,7 +44,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
 
   return (
     <section id="certificates" className="scroll-mt-24 bg-white py-16">
-      <div className="container mx-auto flex max-w-7xl flex-col gap-2">
+      <div className="container mx-auto flex max-w-7xl flex-col gap-2 px-4">
         <div className="flex flex-col items-center gap-2">
           <H2 className="text-secondary">CERTIFICATES</H2>
           <StarSeparator variant="secondary" />
@@ -96,7 +96,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                     <DialogTrigger asChild>
                       <button
                         type="button"
-                        className="group relative aspect-square h-full w-full overflow-hidden rounded-xl border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="group relative aspect-square h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label={`Open certificate ${item.id}`}
                       >
                         <img
@@ -106,7 +106,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                         />
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="w-[90vw] max-w-5xl border-none bg-background p-2 sm:p-6">
+                    <DialogContent className="w-[90vw] max-w-5xl border-none bg-white p-2 sm:p-6">
                       <img
                         src={item.image}
                         alt={item.id}
@@ -123,7 +123,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
               <button
                 key={index}
                 className={`h-2 w-2 rounded-full transition-colors ${
-                  currentSlide === index ? "bg-primary" : "bg-primary/20"
+                  currentSlide === index ? "bg-secondary" : "bg-secondary/20"
                 }`}
                 onClick={() => carouselApi?.scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
