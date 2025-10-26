@@ -59,6 +59,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
               }}
               disabled={!canScrollPrev}
               className="disabled:pointer-events-auto"
+              aria-label="Previous certificate"
             >
               <ArrowLeft className="size-5" />
             </Button>
@@ -70,6 +71,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
               }}
               disabled={!canScrollNext}
               className="disabled:pointer-events-auto"
+              aria-label="Next certificate"
             >
               <ArrowRight className="size-5" />
             </Button>
@@ -118,7 +120,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="mt-8 flex justify-center gap-2">
+          <div className="mt-8 flex justify-center gap-3">
             {certificates.map((_, index) => (
               <button
                 key={index}
