@@ -1,9 +1,11 @@
 ---
-import ProfileImage from "@/components/shared/ProfileImage";
 import { H1, Large } from "../ui/typography";
+import mpen from "@/assets/images/mpen.png";
+
 import { Button } from "../ui/button";
 import { StarSeparator } from "../shared/StarSeparator";
 import { Calendar } from "lucide-react";
+import { Image } from "astro:assets";
 
 const calendarLink = "https://calendar.app.google/X9t1hcfETSp9CApe7";
 ---
@@ -13,7 +15,13 @@ const calendarLink = "https://calendar.app.google/X9t1hcfETSp9CApe7";
     <div
       class="flex flex-col items-center justify-between gap-8 py-20 sm:py-40"
     >
-      <ProfileImage client:idle />
+      <Image
+        loading="eager"
+        fetchpriority="high"
+        src={mpen}
+        alt="Profile image"
+        class="size-60 rounded-full object-cover"
+      />
       <div class="flex flex-col items-center gap-5">
         <H1>MARKO PENAVA</H1>
         <StarSeparator />

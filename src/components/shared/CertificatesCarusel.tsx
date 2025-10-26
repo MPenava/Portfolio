@@ -96,7 +96,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                     <DialogTrigger asChild>
                       <button
                         type="button"
-                        className="group relative aspect-square h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className=" p-1 group relative aspect-square h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label={`Open certificate ${item.id}`}
                       >
                         <img
@@ -122,9 +122,8 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
             {certificates.map((_, index) => (
               <button
                 key={index}
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  currentSlide === index ? "bg-secondary" : "bg-secondary/20"
-                }`}
+                className={`h-2 w-2 rounded-full transition-colors ${currentSlide === index ? "bg-secondary" : "bg-secondary/20"
+                  }`}
                 onClick={() => carouselApi?.scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
