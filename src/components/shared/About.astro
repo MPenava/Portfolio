@@ -4,6 +4,8 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { H1, P } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
+
+import cv from "@/assets/docs/Marko_Penava_CV.pdf";
 ---
 
 <section id="about" class="scroll-mt-24 py-16">
@@ -28,7 +30,9 @@ import { StarSeparator } from "./StarSeparator";
           principles.</P
         >
       </div>
-      <Button variant="outline" size="lg">Download CV <Download /></Button>
+      <Button variant="outline" size="lg" href={cv} download
+        >Download CV <Download /></Button
+      >
     </div>
   </div>
 </section>

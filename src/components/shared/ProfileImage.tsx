@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import mpen from "@/assets/profile/mpen.jpg";
+import mpen from "@/assets/images/mpen.jpg";
 
 const ProfileImage = () => {
   return (
