@@ -1,11 +1,13 @@
 ---
-import { Download } from "lucide-react";
+import { FileUser } from "lucide-react";
 import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
-import { H1, Lead, P } from "../ui/typography";
+import { H1, Lead } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
 
-import cv from "@/assets/docs/Marko_Penava_CV.pdf";
+/*const enCVFileLink =
+  "https://www.canva.com/design/DAG3BAbH6VQ/caVuh2HMUzglf7YwoVfJuQ/view?utm_content=DAG3BAbH6VQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3d7ff6e0f9"*/
+const hrCVFileLink =
+  "https://www.canva.com/design/DAG3AuEHNkk/mvkZqJmtWEutIfSeVQE8qg/view?utm_content=DAG3AuEHNkk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8d6c540b1a";
 ---
 
 <section id="about" class="scroll-mt-24 py-16">
@@ -32,8 +34,8 @@ import cv from "@/assets/docs/Marko_Penava_CV.pdf";
           to maintain.</Lead
         >
       </div>
-      <Button variant="outline" size="lg" href={cv} download
-        >Download CV <Download /></Button
+      <Button variant="outline" size="lg" href={hrCVFileLink} target="_blank"
+        >View CV <FileUser /></Button
       >
     </div>
   </div>
