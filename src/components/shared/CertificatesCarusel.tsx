@@ -98,13 +98,13 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                     <DialogTrigger asChild>
                       <button
                         type="button"
-                        className=" p-1 group relative aspect-square h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="p-1 group relative aspect-[4/3] h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label={`Open certificate ${item.id}`}
                       >
                         <img
                           src={item.image}
                           alt={item.id}
-                          className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                          className="p-2 absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                         />
                       </button>
                     </DialogTrigger>

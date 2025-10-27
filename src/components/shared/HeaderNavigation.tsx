@@ -67,16 +67,16 @@ const HeaderNavigation = () => {
           <SheetContent side="top" className="max-h-dvh overflow-auto">
             <div className="flex flex-col gap-6">
               <a href={links.about} className="font-medium">
-                About
+                ABOUT
               </a>
               <a href={links.skills} className="font-medium">
-                Skills
+                SKILLS
               </a>
               <a href={links.education} className="font-medium">
-                Education & Career
+                EDUCATION & CAREER
               </a>
               <a href={links.certificates} className="font-medium">
-                Certificates
+                CERTIFICATES
               </a>
             </div>
           </SheetContent>
