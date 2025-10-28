@@ -58,7 +58,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                 carouselApi?.scrollPrev();
               }}
               disabled={!canScrollPrev}
-              className="disabled:pointer-events-auto"
+              className="hover:bg-background/80"
               aria-label="Previous certificate"
             >
               <ArrowLeft className="size-5" />
@@ -70,7 +70,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                 carouselApi?.scrollNext();
               }}
               disabled={!canScrollNext}
-              className="disabled:pointer-events-auto"
+              className="hover:bg-background/80"
               aria-label="Next certificate"
             >
               <ArrowRight className="size-5" />
