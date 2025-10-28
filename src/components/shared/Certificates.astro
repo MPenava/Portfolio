@@ -7,6 +7,8 @@ import phpoop from "@/assets/images/certs/php-oop.png";
 import laravel from "@/assets/images/certs/laravel.png";
 import golang from "@/assets/images/certs/golang.png";
 
+import { t } from "i18next";
+
 const certs = [
   {
     id: "vue",
@@ -31,4 +33,8 @@ const certs = [
 ];
 ---
 
-<CertificatesCarusel client:idle certificates={certs} />
+<CertificatesCarusel
+  client:idle
+  certificates={certs}
+  title={t("CERTIFICATES.TITLE")}
+/>

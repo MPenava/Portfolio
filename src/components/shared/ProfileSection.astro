@@ -1,11 +1,11 @@
 ---
 import { H1, Large } from "../ui/typography";
 import mpen from "@/assets/images/mpen.png";
-
 import { Button } from "../ui/button";
 import { StarSeparator } from "../shared/StarSeparator";
 import { Calendar } from "lucide-react";
 import { Image } from "astro:assets";
+import { t } from "i18next";
 
 const calendarLink = "https://calendar.app.google/fZVKUKm8F2f6s15d8";
 ---
@@ -30,7 +30,7 @@ const calendarLink = "https://calendar.app.google/fZVKUKm8F2f6s15d8";
           variant="secondary"
           size="lg"
           href={calendarLink}
-          target="_blank"><Calendar />Book a Meeting</Button
+          target="_blank"><Calendar />{t("PROFILE.BOOK_MEETING")}</Button
         >
       </div>
     </div>

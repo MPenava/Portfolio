@@ -1,10 +1,11 @@
 ---
 import Footer from "@/components/shared/Footer.astro";
 import Header from "@/components/shared/Header.astro";
+import i18next from "i18next";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -18,6 +19,16 @@ import Header from "@/components/shared/Header.astro";
 
     <meta name="generator" content={Astro.generator} />
     <title>MPenava | Portfolio</title>
+    <script is:inline>
+      const supported = ["en", "hr"];
+      const locale =
+        localStorage.getItem("lang") || navigator.language.split("-")[0];
+      const selected = supported.includes(locale) ? locale : "hr";
+
+      if (location.pathname === "/" && selected !== "hr") {
+        location.replace(`/${selected}`);
+      }
+    </script>
   </head>
   <body>
     <Header />

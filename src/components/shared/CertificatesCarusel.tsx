@@ -18,9 +18,13 @@ interface Certificate {
 
 interface CertificatesCaruselProps {
   certificates: Certificate[];
+  title: string;
 }
 
-const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
+const CertificatesCarusel = ({
+  certificates,
+  title,
+}: CertificatesCaruselProps) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -46,7 +50,7 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
     <section id="certificates" className="scroll-mt-24 bg-white py-16">
       <div className="container mx-auto flex max-w-7xl flex-col gap-2 px-4">
         <div className="flex flex-col items-center gap-2">
-          <H1 className="text-secondary">CERTIFICATES</H1>
+          <H1 className="text-secondary">{title}</H1>
           <StarSeparator variant="secondary" />
         </div>
         <div className="mb-8 flex items-end justify-end md:mb-10">
@@ -98,13 +102,13 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
                     <DialogTrigger asChild>
                       <button
                         type="button"
-                        className="p-1 group relative aspect-[4/3] h-full w-full overflow-hidden rounded-xl border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        className="group relative aspect-[4/3] h-full w-full overflow-hidden rounded-xl border p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         aria-label={`Open certificate ${item.id}`}
                       >
                         <img
                           src={item.image}
                           alt={item.id}
-                          className="p-2 absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                          className="absolute inset-0 h-full w-full object-cover object-center p-2 transition-transform duration-300 group-hover:scale-105"
                         />
                       </button>
                     </DialogTrigger>
@@ -124,8 +128,9 @@ const CertificatesCarusel = ({ certificates }: CertificatesCaruselProps) => {
             {certificates.map((_, index) => (
               <button
                 key={index}
-                className={`size-3 rounded-full transition-colors ${currentSlide === index ? "bg-secondary" : "bg-secondary/20"
-                  }`}
+                className={`size-3 rounded-full transition-colors ${
+                  currentSlide === index ? "bg-secondary" : "bg-secondary/20"
+                }`}
                 onClick={() => carouselApi?.scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />

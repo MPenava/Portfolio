@@ -4,6 +4,7 @@ import { P } from "../ui/typography";
 import { Muted } from "../ui/typography";
 import { H4 } from "../ui/typography";
 import { Button } from "../ui/button";
+import { t } from "i18next";
 
 import linkedinLogo from "@/assets/images/media/linkedin.png";
 import githubLogo from "@/assets/images/media/github.png";
@@ -30,7 +31,6 @@ const socialMediaLinks = [
 
 const phone = "+387 63 847 007";
 const address = "Batin II 16 Posušje, BiH";
-const copyright = "© 2025 Portfolio - All rights reserved.";
 ---
 
 <footer>
@@ -40,14 +40,14 @@ const copyright = "© 2025 Portfolio - All rights reserved.";
         <div class="flex flex-col items-center gap-2">
           <div class="flex items-center gap-2">
             <Phone className="size-5" />
-            <H4>Contact</H4>
+            <H4>{t("FOOTER.CONTACT")}</H4>
           </div>
           <P>{phone}</P>
         </div>
         <div class="flex flex-col items-center gap-2">
           <div class="flex items-center gap-2">
             <Earth className="size-5" />
-            <H4>Around the Web</H4>
+            <H4>{t("FOOTER.AROUND_THE_WEB")}</H4>
           </div>
           <div class="flex flex-row gap-3">
             {
@@ -67,14 +67,14 @@ const copyright = "© 2025 Portfolio - All rights reserved.";
         <div class="flex flex-col items-center gap-2">
           <div class="flex items-center gap-2">
             <Mail className="size-5" />
-            <H4>Address</H4>
+            <H4>{t("FOOTER.ADDRESS")}</H4>
           </div>
           <P>{address}</P>
         </div>
       </div>
     </div>
     <div class="mt-8 flex w-full justify-center border-t pt-4">
-      <Muted>{copyright}</Muted>
+      <Muted>{t("FOOTER.COPYRIGHT")}</Muted>
     </div>
   </div>
 </footer>

@@ -3,6 +3,7 @@ import { FileUser } from "lucide-react";
 import { Button } from "../ui/button";
 import { H1, Lead } from "../ui/typography";
 import { StarSeparator } from "./StarSeparator";
+import { t } from "i18next";
 
 /*const enCVFileLink =
   "https://www.canva.com/design/DAG3BAbH6VQ/caVuh2HMUzglf7YwoVfJuQ/view?utm_content=DAG3BAbH6VQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3d7ff6e0f9"*/
@@ -15,27 +16,20 @@ const hrCVFileLink =
     class="container mx-auto flex max-w-7xl flex-col justify-center gap-16 px-4"
   >
     <div class="flex flex-col items-center gap-2">
-      <H1>ABOUT</H1>
+      <H1>{t("ABOUT.TITLE")}</H1>
       <StarSeparator />
     </div>
     <div class="flex flex-col items-center gap-5">
       <div class="mx-0 flex flex-col items-stretch gap-5 md:mx-32 md:flex-col">
         <Lead className="text-center text-foreground"
-          >I’m a frontend developer with a Master’s degree in Computer Science
-          from the University of Mostar. Since 2023, I’ve been working at an IT
-          company where I build and maintain web and mobile applications using
-          React and React Native.</Lead
+          >{t("ABOUT.DESCRIPTION1")}</Lead
         >
         <Lead className="text-center text-foreground"
-          >Through hands-on project experience, I’ve developed a solid
-          understanding of UI/UX, responsive design, and performance
-          optimization. I enjoy turning ideas into practical, well-designed
-          interfaces and take pride in writing clean, efficient code that’s easy
-          to maintain.</Lead
+          >{t("ABOUT.DESCRIPTION2")}</Lead
         >
       </div>
       <Button variant="outline" size="lg" href={hrCVFileLink} target="_blank"
-        >View CV <FileUser /></Button
+        >{t("ABOUT.VIEW_CV")} <FileUser /></Button
       >
     </div>
   </div>

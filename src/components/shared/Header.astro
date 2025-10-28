@@ -1,5 +1,12 @@
 ---
 import { HeaderNavigation } from "./HeaderNavigation";
+import { t } from "i18next";
 ---
 
-<HeaderNavigation client:idle />
+<HeaderNavigation
+  client:idle
+  about={t("NAVIGATION.ABOUT")}
+  education={t("NAVIGATION.EDUCATION")}
+  skills={t("NAVIGATION.SKILLS")}
+  certificates={t("NAVIGATION.CERTIFICATES")}
+/>

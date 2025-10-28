@@ -1,0 +1,40 @@
+{
+  "NAVIGATION": {
+    "ABOUT": "ABOUT",
+    "SKILLS": "SKILLS",
+    "EDUCATION": "EDUCATION & CAREER",
+    "CERTIFICATES": "CERTIFICATES"
+  },
+  "PROFILE": {
+    "BOOK_MEETING": "Book a Meeting"
+  },
+  "ABOUT": {
+    "TITLE": "ABOUT",
+    "DESCRIPTION1": "I'm a frontend developer with a Master's degree in Computer Science from the University of Mostar. Since 2023, I've been working at an IT company where I build and maintain web and mobile applications using React and React Native.",
+    "DESCRIPTION2": "Through hands-on project experience, I've developed a solid understanding of UI/UX, responsive design, and performance optimization. I enjoy turning ideas into practical, well-designed interfaces and take pride in writing clean, efficient code that's easy to maintain.",
+    "VIEW_CV": "View CV"
+  },
+  "SKILLS": {
+    "TITLE": "SKILLS"
+  },
+  "EDUCATION": {
+    "TITLE": "EDUCATION & CAREER",
+    "BACHELOR": "Bachelor of Computer Science, Faculty of Natural Sciences, Mathematics and Education at Mostar",
+    "MASTER": "Master of Computer Science, Faculty of Natural Sciences, Mathematics and Education at Mostar",
+    "JOB": "Frontend Developer at Inovia",
+    "DATES": {
+      "BACHELOR": "Oct 2018 - Nov 2021",
+      "MASTER": "Nov 2021 - Nov 2023",
+      "JOB": "Jan 2024 - now"
+    }
+  },
+  "CERTIFICATES": {
+    "TITLE": "CERTIFICATES"
+  },
+  "FOOTER": {
+    "CONTACT": "Contact",
+    "AROUND_THE_WEB": "Around the Web",
+    "ADDRESS": "Address",
+    "COPYRIGHT": "© 2025 Portfolio - All rights reserved."
+  }
+}

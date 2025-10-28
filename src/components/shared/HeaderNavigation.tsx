@@ -10,6 +10,7 @@ import { MenuIcon } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { H3, Large } from "../ui/typography";
+import { LanguageSelect } from "./LanguageSelect";
 
 const links = {
   about: "#about",
@@ -20,11 +21,21 @@ const links = {
 
 const menuLinkStyle = "h-11";
 
-const HeaderNavigation = () => {
-  // Track currently active nav key
+type THeaderNavigationProps = {
+  about: string;
+  education: string;
+  skills: string;
+  certificates: string;
+};
+
+const HeaderNavigation = ({
+  about,
+  education,
+  skills,
+  certificates,
+}: THeaderNavigationProps) => {
   const [active, setActive] = useState<string | null>(null);
 
-  // Determine initial active from location.hash
   useEffect(() => {
     const setFromHash = () => {
       const hash = window.location.hash || "";
@@ -57,49 +68,53 @@ const HeaderNavigation = () => {
             <NavigationMenuItem>
               <NavigationMenuLink
                 href={links.about}
-                className={`${menuLinkStyle} ${active === "about" ? activeClass : ""
-                  }`}
+                className={`${menuLinkStyle} ${
+                  active === "about" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("about")}
                 aria-current={active === "about" ? "page" : undefined}
               >
-                <Large>ABOUT</Large>
+                <Large>{about}</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               <NavigationMenuLink
                 href={links.education}
-                className={`${menuLinkStyle} ${active === "education" ? activeClass : ""
-                  }`}
+                className={`${menuLinkStyle} ${
+                  active === "education" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("education")}
                 aria-current={active === "education" ? "page" : undefined}
               >
-                <Large>EDUCATION & CAREER</Large>
+                <Large>{education}</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 href={links.skills}
-                className={`${menuLinkStyle} ${active === "skills" ? activeClass : ""
-                  }`}
+                className={`${menuLinkStyle} ${
+                  active === "skills" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("skills")}
                 aria-current={active === "skills" ? "page" : undefined}
               >
-                <Large>SKILLS</Large>
+                <Large>{skills}</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
                 href={links.certificates}
-                className={`${menuLinkStyle} ${active === "certificates" ? activeClass : ""
-                  }`}
+                className={`${menuLinkStyle} ${
+                  active === "certificates" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("certificates")}
                 aria-current={active === "certificates" ? "page" : undefined}
               >
-                <Large>CERTIFICATES</Large>
+                <Large>{certificates}</Large>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem></NavigationMenuItem>
+            <LanguageSelect />
           </NavigationMenuList>
         </NavigationMenu>
         <Sheet>
@@ -112,40 +127,45 @@ const HeaderNavigation = () => {
             <div className="flex flex-col gap-6">
               <a
                 href={links.about}
-                className={`font-medium ${active === "about" ? activeClass : ""
-                  }`}
+                className={`font-medium ${
+                  active === "about" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("about")}
                 aria-current={active === "about" ? "page" : undefined}
               >
-                ABOUT
-              </a>
-              <a
-                href={links.skills}
-                className={`font-medium ${active === "skills" ? activeClass : ""
-                  }`}
-                onClick={() => handleNavClick("skills")}
-                aria-current={active === "skills" ? "page" : undefined}
-              >
-                SKILLS
+                {about}
               </a>
               <a
                 href={links.education}
-                className={`font-medium ${active === "education" ? activeClass : ""
-                  }`}
+                className={`font-medium ${
+                  active === "education" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("education")}
                 aria-current={active === "education" ? "page" : undefined}
               >
-                EDUCATION & CAREER
+                {education}
+              </a>
+              <a
+                href={links.skills}
+                className={`font-medium ${
+                  active === "skills" ? activeClass : ""
+                }`}
+                onClick={() => handleNavClick("skills")}
+                aria-current={active === "skills" ? "page" : undefined}
+              >
+                {skills}
               </a>
               <a
                 href={links.certificates}
-                className={`font-medium ${active === "certificates" ? activeClass : ""
-                  }`}
+                className={`font-medium ${
+                  active === "certificates" ? activeClass : ""
+                }`}
                 onClick={() => handleNavClick("certificates")}
                 aria-current={active === "certificates" ? "page" : undefined}
               >
-                CERTIFICATES
+                {certificates}
               </a>
+              <LanguageSelect />
             </div>
           </SheetContent>
         </Sheet>

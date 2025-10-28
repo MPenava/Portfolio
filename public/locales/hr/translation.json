@@ -1,0 +1,40 @@
+{
+  "NAVIGATION": {
+    "ABOUT": "O MENI",
+    "SKILLS": "VJEŠTINE",
+    "EDUCATION": "OBRAZOVANJE I KARIJERA",
+    "CERTIFICATES": "CERTIFIKATI"
+  },
+  "PROFILE": {
+    "BOOK_MEETING": "Zakaži Sastanak"
+  },
+  "ABOUT": {
+    "TITLE": "O MENI",
+    "DESCRIPTION1": "Frontend sam developer s magistarskim stupnjem računalnih znanosti Sveučilišta u Mostaru. Od 2023. godine radim u IT tvrtki gdje izgrađujem i održavam web i mobilne aplikacije koristeći React i React Native.",
+    "DESCRIPTION2": "Kroz praktično iskustvo rada na projektima, razvio sam solidno razumijevanje UI/UX-a, responzivnog dizajna i optimizacije performansi. Uživam u pretvaranju ideja u praktična, dobro dizajnirana sučelja i ponosim se pisanjem čistog, efikasnog koda koji je lako održavati.",
+    "VIEW_CV": "Pogledaj CV"
+  },
+  "SKILLS": {
+    "TITLE": "VJEŠTINE"
+  },
+  "EDUCATION": {
+    "TITLE": "OBRAZOVANJE I KARIJERA",
+    "BACHELOR": "Preddiplomski studij računalnih znanosti, Prirodno-matematički fakultet u Mostaru",
+    "MASTER": "Diplomski studij računalnih znanosti, Prirodno-matematički fakultet u Mostaru",
+    "JOB": "Frontend Developer u Inovia",
+    "DATES": {
+      "BACHELOR": "Lis 2018 - Stu 2021",
+      "MASTER": "Stu 2021 - Stu 2023",
+      "JOB": "Sij 2024 - sada"
+    }
+  },
+  "CERTIFICATES": {
+    "TITLE": "CERTIFIKATI"
+  },
+  "FOOTER": {
+    "CONTACT": "Kontakt",
+    "AROUND_THE_WEB": "Društvene mreže",
+    "ADDRESS": "Adresa",
+    "COPYRIGHT": "© 2025 Portfolio - Sva prava pridržana."
+  }
+}
